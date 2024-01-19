@@ -196,13 +196,3 @@ module.exports = {
     },
   },
 };
-
-const { exec } = require("child_process");
-
-exec("node keep_alive.js", (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Error executing keep_alive.js: ${error}`);
-    return;
-  }
-  console.log(`Keep-alive script started: ${stdout}`);
-});
